@@ -1,0 +1,93 @@
+:root {
+  /* Colors */
+  --white: #FFFFFF;
+  --cream: #F9F6F3;
+  --yellow-light: #f6e2b1;
+  --yellow: #edd282;
+  --yellow-dark: #EACC72;
+  --pink-light: #f1c7ed;
+  --pink: #ebb1e6;
+  --pink-dark: #e49adf;
+  --red-light: #f7a3ab;
+  --red: #ee7c8c;
+  --red-dark: #e3516e;
+  --purple-light: #c7cdf0;
+  --purple: #b0b9ea;
+  --purple-dark: #98a6e4;
+  --green-light: #a8c7c3;
+  --green: #86b1ac;
+  --green-dark: #639c95;
+  --pure-black: black;
+  --almost-black: #333445;
+  --grey-light: #989898;
+  --grey: #727272;
+  --grey-dark: #4E4E4E;
+  --background-color: var(--cream);
+  --card-color: var(--white);
+  --primary-2-button-color: var(--purple);
+  --primary-button-background: var(--yellow);
+  --secondary-button-background: var(--white);
+  --text-color: var(--almost-black);
+  --shadow-color: var(--grey-dark);
+  --error-button-background: var(--red-dark);
+  --content-color-on-light-button: var(--almost-black);
+  --content-color-on-dark-button: var(--white);
+  --icon-color: var(--almost-black);
+
+  /* Text Sizes */
+  --xs-font: 16px;
+  --s-font: 18px;
+  --m-font: 20px;
+  --l-font: 24px;
+  --xl-font: 32px;
+
+  /* Grid Sizes */
+  --xxs: 4px;
+  --xs: 8px;
+  --s: 16px;
+  --m: 24px;
+  --l: 32px;
+  --xl: 40px;
+  --xxl: 48px;
+
+  /* Z Index */
+  --z-index-1: 4;
+  --z-index-2: 8;
+  --z-index-3: 16;
+  --z-index-4: 32;
+  --z-index-5: 40;
+}
+
+[data-theme='dark'] {
+  --background-color: var(--grey-dark);
+  --card-color: var(--grey);
+  --primary-2-button-color: var(--purple-light);
+  --primary-button-background: var(--yellow-light);
+  --secondary-button-background: var(--grey);
+  --text-color: var(--white);
+  --shadow-color: var(--pure-black);
+  --error-button-background: var(--red-light);
+  --content-color-on-light-button: var(--almost-black);
+  --content-color-on-dark-button: var(--white);
+  --icon-color: var(--white);
+}
+
+@media screen and (min-width: 700px) {
+  :root {
+    /* Text Sizes */
+    --xs-font: 12px;
+    --s-font: 14px;
+    --m-font: 16px;
+    --l-font: 20px;
+    --xl-font: 24px;
+
+    /* Grid Sizes */
+    --xxs: 2px;
+    --xs: 4px;
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+  }
+}
