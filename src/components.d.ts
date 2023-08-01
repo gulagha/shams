@@ -6,69 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface ShamsIcons {
         /**
-          * The first name
+          * Name of the icon
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
-    interface ShamsButton {
+        "name": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLShamsIconsElement extends Components.ShamsIcons, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
-    interface HTMLShamsButtonElement extends Components.ShamsButton, HTMLStencilElement {
-    }
-    var HTMLShamsButtonElement: {
-        prototype: HTMLShamsButtonElement;
-        new (): HTMLShamsButtonElement;
+    var HTMLShamsIconsElement: {
+        prototype: HTMLShamsIconsElement;
+        new (): HTMLShamsIconsElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
-        "shams-button": HTMLShamsButtonElement;
+        "shams-icons": HTMLShamsIconsElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface ShamsIcons {
         /**
-          * The first name
+          * Name of the icon
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
-    interface ShamsButton {
+        "name"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
-        "shams-button": ShamsButton;
+        "shams-icons": ShamsIcons;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "shams-button": LocalJSX.ShamsButton & JSXBase.HTMLAttributes<HTMLShamsButtonElement>;
+            "shams-icons": LocalJSX.ShamsIcons & JSXBase.HTMLAttributes<HTMLShamsIconsElement>;
         }
     }
 }
