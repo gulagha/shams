@@ -6,69 +6,114 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface ShamsButton {
+        /**
+          * A props / attribute that makes the button primary
+         */
+        "type": "primary" | "danger" | "primary-2";
+    }
+    interface ShamsIcons {
+        /**
+          * Name of the icon
+         */
+        "name": string;
+    }
+    interface ShamsTextInput {
+        /**
+          * Placeholder value
+         */
+        "errorMessage": string | null | undefined;
+        /**
+          * Label for the input
+         */
+        "label": string | null | undefined;
+        /**
+          * On change handler for input
+         */
+        "onInputChange": (event: Event) => void;
+        /**
+          * Placeholder value
+         */
+        "placeholder": string | null | undefined;
+        /**
+          * Value
+         */
+        "value": string | null | undefined;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLShamsButtonElement extends Components.ShamsButton, HTMLStencilElement {
     }
     var HTMLShamsButtonElement: {
         prototype: HTMLShamsButtonElement;
         new (): HTMLShamsButtonElement;
     };
+    interface HTMLShamsIconsElement extends Components.ShamsIcons, HTMLStencilElement {
+    }
+    var HTMLShamsIconsElement: {
+        prototype: HTMLShamsIconsElement;
+        new (): HTMLShamsIconsElement;
+    };
+    interface HTMLShamsTextInputElement extends Components.ShamsTextInput, HTMLStencilElement {
+    }
+    var HTMLShamsTextInputElement: {
+        prototype: HTMLShamsTextInputElement;
+        new (): HTMLShamsTextInputElement;
+    };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
         "shams-button": HTMLShamsButtonElement;
+        "shams-icons": HTMLShamsIconsElement;
+        "shams-text-input": HTMLShamsTextInputElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface ShamsButton {
+        /**
+          * A props / attribute that makes the button primary
+         */
+        "type"?: "primary" | "danger" | "primary-2";
+    }
+    interface ShamsIcons {
+        /**
+          * Name of the icon
+         */
+        "name"?: string;
+    }
+    interface ShamsTextInput {
+        /**
+          * Placeholder value
+         */
+        "errorMessage"?: string | null | undefined;
+        /**
+          * Label for the input
+         */
+        "label"?: string | null | undefined;
+        /**
+          * On change handler for input
+         */
+        "onInputChange"?: (event: Event) => void;
+        /**
+          * Placeholder value
+         */
+        "placeholder"?: string | null | undefined;
+        /**
+          * Value
+         */
+        "value"?: string | null | undefined;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
         "shams-button": ShamsButton;
+        "shams-icons": ShamsIcons;
+        "shams-text-input": ShamsTextInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "shams-button": LocalJSX.ShamsButton & JSXBase.HTMLAttributes<HTMLShamsButtonElement>;
+            "shams-icons": LocalJSX.ShamsIcons & JSXBase.HTMLAttributes<HTMLShamsIconsElement>;
+            "shams-text-input": LocalJSX.ShamsTextInput & JSXBase.HTMLAttributes<HTMLShamsTextInputElement>;
         }
     }
 }

@@ -1,4 +1,5 @@
 :root {
+  --main-font-family: 'Lexend';
   /* Colors */
   --white: #FFFFFF;
   --cream: #F9F6F3;
@@ -23,20 +24,36 @@
   --grey: #727272;
   --grey-dark: #4E4E4E;
   --background-color: var(--cream);
-  --card-color: var(--white);
-  --primary-2-button-color: var(--purple);
+
+  /* Button colors */
   --primary-button-background: var(--yellow);
+  --primary-button-active-background: var(--yellow-dark);
+  --primary-button-hover-background: var(--yellow-light);
+  --primary-2-button-background: var(--purple);
+  --primary-2-button-active-background: var(--purple-dark);
+  --primary-2-button-hover-background: var(--purple-light);
   --secondary-button-background: var(--white);
+  --secondary-button-active-background: var(--cream);
+  --secondary-button-hover-background: var(--white);
+  --danger-button-background: var(--red);
+  --danger-button-active-background: var(--red-dark);
+  --danger-button-hover-background: var(--red-light);
+
+  --text-input-color: var(--white);
+  --card-color: var(--white);
   --text-color: var(--almost-black);
   --shadow-color: var(--grey-dark);
-  --error-button-background: var(--red-dark);
   --content-color-on-light-button: var(--almost-black);
   --content-color-on-dark-button: var(--white);
   --icon-color: var(--almost-black);
+  --border-color: var(--almost-black);
+  --border: var(--border-width) solid var(--border-color);
+  --box-shadow: var(--shadow-distance) var(--shadow-color);
+  --inner-shadow: inset var(--shadow-distance) var(--grey-light);
 
   /* Text Sizes */
-  --xs-font: 16px;
-  --s-font: 18px;
+  --xs-font: 14px;
+  --s-font: 16px;
   --m-font: 20px;
   --l-font: 24px;
   --xl-font: 32px;
@@ -50,6 +67,18 @@
   --xl: 40px;
   --xxl: 48px;
 
+  /* Border radius */
+  --xxs-border-radius: 8px;
+  --xs-border-radius: 12px;
+  --s-border-radius: 16px;
+  --m-border-radius: 20px;
+  --l-border-radius: 24px;
+  --xl-border-radius: 28px;
+  --xxl-border-radius: 32px;
+
+  --border-width: 1px;
+  --shadow-distance: 2px 2px;
+
   /* Z Index */
   --z-index-1: 4;
   --z-index-2: 8;
@@ -59,20 +88,24 @@
 }
 
 [data-theme='dark'] {
-  --background-color: var(--grey-dark);
+  --background-color: var(--almost-black);
+  --text-input-color: var(--almost-black);
   --card-color: var(--grey);
-  --primary-2-button-color: var(--purple-light);
-  --primary-button-background: var(--yellow-light);
   --secondary-button-background: var(--grey);
+  --secondary-button-active-background: var(--grey-dark);
+  --secondary-button-hover-background: var(--grey-light);
   --text-color: var(--white);
   --shadow-color: var(--pure-black);
-  --error-button-background: var(--red-light);
   --content-color-on-light-button: var(--almost-black);
   --content-color-on-dark-button: var(--white);
   --icon-color: var(--white);
+  --border-color: var(--white);
+  --border: var(--border-width) solid var(--border-color);
+  --box-shadow: var(--shadow-distance) var(--shadow-color);
+  --inner-shadow: inset var(--shadow-distance) var(--shadow-color);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   :root {
     /* Text Sizes */
     --xs-font: 12px;
@@ -90,4 +123,9 @@
     --xl: 32px;
     --xxl: 40px;
   }
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('/src/assets/Lexend/Lexend-VariableFont_wght.woff2') format('woff2');
 }

@@ -1,0 +1,33 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: var(--xl);
+  width: calc(100% - 2 * var(--m));
+  border-radius: var(--l-border-radius);
+  padding: 0 var(--m) 0 var(--m);
+  border: var(--border);
+  box-shadow: var(--inner-shadow);
+  background-color: var(--text-input-color);
+  color: var(--text-color);
+  font-size: var(--s-font);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-size: var(--xs-font);
+  color: var(--text-color);
+  margin-bottom: var(--xxs);
+}
+
+input.error {
+  border-color: var(--red-dark);
+}
+
+label.error {
+  color: var(--red-dark);
+}

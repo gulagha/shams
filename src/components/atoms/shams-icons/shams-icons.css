@@ -1,0 +1,8 @@
+svg[fill="none"] {
+  fill: none !important;
+}
+
+svg {
+  fill: var(--icon-color); /* default color */
+  stroke: var(--icon-color);
+}
