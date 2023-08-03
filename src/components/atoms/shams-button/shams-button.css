@@ -1,0 +1,80 @@
+button {
+  height: var(--xl);
+  border-radius: var(--m-border-radius);
+  background-color: var(--secondary-button-background);
+  padding-left: var(--m);
+  padding-right: var(--m);
+  width: 100%;
+  font-size: var(--m-font);
+  text-transform: uppercase;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-distance) var(--shadow-color);
+  color: var(--text-color);
+  font-family: var(--main-font-family);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-button-hover-background);
+}
+
+button:focus-visible {
+  background-color: var(--secondary-button-hover-background);
+}
+
+button:active {
+  background-color: var(--secondary-button-active-background);
+  box-shadow: 0 0;
+}
+
+.primary {
+  color: var(--content-color-on-light-button);
+  background-color: var(--primary-button-background);
+}
+
+.primary:hover {
+  background-color: var(--primary-button-hover-background);
+}
+
+.primary:focus-visible {
+  background-color: var(--primary-button-hover-background);
+}
+
+.primary:active {
+  background-color: var(--primary-button-active-background);
+}
+
+.primary-2 {
+  color: var(--content-color-on-light-button);
+  background-color: var(--primary-2-button-background);
+}
+
+.primary-2:hover {
+  background-color: var(--primary-2-button-hover-background);
+}
+
+.primary-2:focus-visible {
+  background-color: var(--primary-2-button-hover-background);
+}
+
+.primary-2:active {
+  background-color: var(--primary-2-button-active-background);
+}
+
+.danger {
+  color: var(--content-color-on-light-button);
+  background-color: var(--danger-button-background);
+}
+
+.danger:hover {
+  background-color: var(--danger-button-hover-background);
+}
+
+.danger:focus-visible {
+  background-color: var(--danger-button-hover-background);
+}
+
+.danger:active {
+  background-color: var(--danger-button-active-background);
+}
+

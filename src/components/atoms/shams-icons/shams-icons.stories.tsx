@@ -1,5 +1,5 @@
 export default {
-  title: 'Example/Icon',
+  title: 'Atoms/Icon',
   tags: ['autodocs'],
   render: () => {
     return `

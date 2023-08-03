@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ShamsButton {
+        /**
+          * A props / attribute that makes the button primary
+         */
+        "type": "primary" | "danger" | "primary-2";
+    }
     interface ShamsIcons {
         /**
           * Name of the icon
@@ -14,6 +20,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLShamsButtonElement extends Components.ShamsButton, HTMLStencilElement {
+    }
+    var HTMLShamsButtonElement: {
+        prototype: HTMLShamsButtonElement;
+        new (): HTMLShamsButtonElement;
+    };
     interface HTMLShamsIconsElement extends Components.ShamsIcons, HTMLStencilElement {
     }
     var HTMLShamsIconsElement: {
@@ -21,10 +33,17 @@ declare global {
         new (): HTMLShamsIconsElement;
     };
     interface HTMLElementTagNameMap {
+        "shams-button": HTMLShamsButtonElement;
         "shams-icons": HTMLShamsIconsElement;
     }
 }
 declare namespace LocalJSX {
+    interface ShamsButton {
+        /**
+          * A props / attribute that makes the button primary
+         */
+        "type"?: "primary" | "danger" | "primary-2";
+    }
     interface ShamsIcons {
         /**
           * Name of the icon
@@ -32,6 +51,7 @@ declare namespace LocalJSX {
         "name"?: string;
     }
     interface IntrinsicElements {
+        "shams-button": ShamsButton;
         "shams-icons": ShamsIcons;
     }
 }
@@ -39,6 +59,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "shams-button": LocalJSX.ShamsButton & JSXBase.HTMLAttributes<HTMLShamsButtonElement>;
             "shams-icons": LocalJSX.ShamsIcons & JSXBase.HTMLAttributes<HTMLShamsIconsElement>;
         }
     }
