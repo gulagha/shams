@@ -18,6 +18,28 @@ export namespace Components {
          */
         "name": string;
     }
+    interface ShamsTextInput {
+        /**
+          * Placeholder value
+         */
+        "errorMessage": string | null | undefined;
+        /**
+          * Label for the input
+         */
+        "label": string | null | undefined;
+        /**
+          * On change handler for input
+         */
+        "onInputChange": (event: Event) => void;
+        /**
+          * Placeholder value
+         */
+        "placeholder": string | null | undefined;
+        /**
+          * Value
+         */
+        "value": string | null | undefined;
+    }
 }
 declare global {
     interface HTMLShamsButtonElement extends Components.ShamsButton, HTMLStencilElement {
@@ -32,9 +54,16 @@ declare global {
         prototype: HTMLShamsIconsElement;
         new (): HTMLShamsIconsElement;
     };
+    interface HTMLShamsTextInputElement extends Components.ShamsTextInput, HTMLStencilElement {
+    }
+    var HTMLShamsTextInputElement: {
+        prototype: HTMLShamsTextInputElement;
+        new (): HTMLShamsTextInputElement;
+    };
     interface HTMLElementTagNameMap {
         "shams-button": HTMLShamsButtonElement;
         "shams-icons": HTMLShamsIconsElement;
+        "shams-text-input": HTMLShamsTextInputElement;
     }
 }
 declare namespace LocalJSX {
@@ -50,9 +79,32 @@ declare namespace LocalJSX {
          */
         "name"?: string;
     }
+    interface ShamsTextInput {
+        /**
+          * Placeholder value
+         */
+        "errorMessage"?: string | null | undefined;
+        /**
+          * Label for the input
+         */
+        "label"?: string | null | undefined;
+        /**
+          * On change handler for input
+         */
+        "onInputChange"?: (event: Event) => void;
+        /**
+          * Placeholder value
+         */
+        "placeholder"?: string | null | undefined;
+        /**
+          * Value
+         */
+        "value"?: string | null | undefined;
+    }
     interface IntrinsicElements {
         "shams-button": ShamsButton;
         "shams-icons": ShamsIcons;
+        "shams-text-input": ShamsTextInput;
     }
 }
 export { LocalJSX as JSX };
@@ -61,6 +113,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "shams-button": LocalJSX.ShamsButton & JSXBase.HTMLAttributes<HTMLShamsButtonElement>;
             "shams-icons": LocalJSX.ShamsIcons & JSXBase.HTMLAttributes<HTMLShamsIconsElement>;
+            "shams-text-input": LocalJSX.ShamsTextInput & JSXBase.HTMLAttributes<HTMLShamsTextInputElement>;
         }
     }
 }
